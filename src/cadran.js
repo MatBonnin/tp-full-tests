@@ -3,7 +3,7 @@ export function calculHeure(tabCadrans) {
 
   let heure = 'mortin';
 
-  const [lune, soleil, terre] = tabCadrans;
+  let [lune, soleil, terre] = tabCadrans;
   let diviserPar2 = lune === 2 ? true : false;
   let moins2 = lune === 1 ? true : false;
   let pasCadranTerre = soleil === 1 ? true : false;

@@ -7,6 +7,5 @@ cadrasn soleil : 1 => annule cadran de terre ; 2 => double valeur du cadran terr
 cadran terre : 1 => ajout 2 au total ; 2 => le resultt total est 6 (plus fort)
 
 
-const valeur = 7;
-const resultat = Math.floor(valeur / 2);
-console.log(resultat); // Affiche 3
+
+1 + 2 + 2 +2

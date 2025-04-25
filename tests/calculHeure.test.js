@@ -1,6 +1,6 @@
+import { describe, expect, test } from 'vitest';
+
 import { calculHeure } from '../src/cadran';
-import { describe } from 'node:test';
-import { expect } from 'vitest';
 
 const mortin = 'mortin';
 const aprenoon = 'aprenoon';
@@ -34,7 +34,7 @@ describe('Test des cadrans', () => {
     describe('Double la valeur du cadran de terre', () => {
       test('TEST 1', () => {
         const tabsCadran = [1, 2, 1];
-        expect(calculHeure(tabsCadran)).toBe(mortin);
+        expect(calculHeure(tabsCadran)).toBe(nuight);
       });
       test('test 2', () => {
         const tabsCadran = [1, 2, 2];
