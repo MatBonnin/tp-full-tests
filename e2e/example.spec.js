@@ -81,4 +81,11 @@ test.describe('test e2e', () => {
     await page.screenshot({ path: 'screenshots/screenshotClick.png' });
     await expect(resultText).not.toHaveText('');
   });
+
+  test('screen ecran d accueil', async ({ page }) => {
+    await expect(page).toHaveScreenshot('accueil.png', {
+      fullPage: true,
+      maxDiffPixelRatio: 0.01,
+    });
+  });
 });
