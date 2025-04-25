@@ -10,11 +10,15 @@ const nuight = 'nuight';
 describe('Test des cas impossible', () => {
   test('test de nombre autre que 1 et 2', () => {
     const tabsCadran = [0, 3, 5];
-    expect(calculHeure(tabsCadran)).toThrow();
+    expect(calculHeure(tabsCadran)).toBe(
+      'Les valeurs de lune, soleil et terre doivent être des nombres entre 1 et 2.'
+    );
   });
   test('test de string', () => {
     const tabsCadran = ['0', '3', '5'];
-    expect(calculHeure(tabsCadran)).toThrow();
+    expect(calculHeure(tabsCadran)).toBe(
+      'Les valeurs de lune, soleil et terre doivent être des nombres entre 1 et 2.'
+    );
   });
 });
 
@@ -34,7 +38,7 @@ describe('Test des cadrans', () => {
     describe('Double la valeur du cadran de terre', () => {
       test('TEST 1', () => {
         const tabsCadran = [1, 2, 1];
-        expect(calculHeure(tabsCadran)).toBe(nuight);
+        expect(calculHeure(tabsCadran)).toBe(soirning);
       });
       test('test 2', () => {
         const tabsCadran = [1, 2, 2];

@@ -4,6 +4,21 @@ export function calculHeure(tabCadrans) {
   let heure = 'mortin';
 
   let [lune, soleil, terre] = tabCadrans;
+
+  if (
+    typeof lune !== 'number' ||
+    typeof soleil !== 'number' ||
+    typeof terre !== 'number' ||
+    lune < 1 ||
+    lune > 2 ||
+    soleil < 1 ||
+    soleil > 2 ||
+    terre < 1 ||
+    terre > 2
+  ) {
+    return 'Les valeurs de lune, soleil et terre doivent être des nombres entre 1 et 2.';
+  }
+
   let diviserPar2 = lune === 2 ? true : false;
   let moins2 = lune === 1 ? true : false;
   let pasCadranTerre = soleil === 1 ? true : false;
